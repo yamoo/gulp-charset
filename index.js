@@ -1,7 +1,6 @@
 var through = require('through2');
 var gutil = require('gulp-util');
 var charset = require('./lib/charset');
-var path = require('path');
 var PluginError = gutil.PluginError;
 var PluginLog = gutil.log;
 
@@ -22,11 +21,9 @@ function gulpCharset(options) {
       return cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
     }
 
-    contents = String(file.contents);
     compiled = new charset({
-      contents: contents,
-      settings: options,
-      ext: path.extname(file.path)
+      file: file,
+      settings: options
     });
     file.contents = new Buffer(compiled);
 

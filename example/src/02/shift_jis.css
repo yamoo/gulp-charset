@@ -1,0 +1,5 @@
+@charset "shift_jis";
+
+.dummy:before {
+  content: "ƒeƒXƒg";
+}

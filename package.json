@@ -1,6 +1,6 @@
 {
   "name": "gulp-charset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert text encoding and replace charset code",
   "author": "Marty",
   "license": "MIT",
