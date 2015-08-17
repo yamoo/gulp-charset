@@ -49,6 +49,11 @@ Configuration of charset code replacement.
 
 ```js
 fileTypes: {
+  xml: {
+    ext: ['.html'],
+    detect: /<\?xml\s+version=["']?1.0["']?\encoding=.+?["']?\s*\?>/i,
+    replace: '<?xml version="1.0" encoding="{{charset}}"?>'
+  },
   html5: {
     ext: ['.html'],
     detect: /<meta\s+charset=["']?.+?["']?\s*\/?>/i,
